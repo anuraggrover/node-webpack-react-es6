@@ -2,7 +2,7 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: "./bin/www",
+  entry: "./dist-babel/bin/www.js",
   target: "node",
   externals: [nodeExternals()],
   module: {

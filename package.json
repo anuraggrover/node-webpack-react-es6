@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node ./bin/www",
-    "start:dev": "nodemon --exec node dist/index.js",
-    "build:dev": "webpack --mode development"
+    "start": "nodemon ./dist/main.js",
+    "start:dev": "nodemon ./dist-babel/bin/www.js",
+    "build:dev": "webpack --mode development",
+    "babel": "babel src --out-dir dist-babel"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

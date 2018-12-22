@@ -3,14 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// import ReactDOMServer from 'react-dom/server';
-// import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import React from 'react';
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 import {name} from './es6';
-// import ReactComponent from './ReactComponent';
+import ReactComponent from './ReactComponent';
 
 var app = express();
 
@@ -29,8 +29,8 @@ app.use('/users', usersRouter);
 
 app.get('/render', (req, res) => {
   res.json({
-    name: "hello",
-    // html: ReactDOMServer.renderToString(<ReactComponent/>)
+    name,
+    html: ReactDOMServer.renderToString(<ReactComponent/>)
   })
 });
 
