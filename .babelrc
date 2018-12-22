@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ],
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ]
+  ]
+}
